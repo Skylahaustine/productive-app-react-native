@@ -11,6 +11,7 @@ import { useColorScheme } from 'react-native';
 import { Drawer } from 'expo-router/drawer';
 import { View } from '../components/Themed';
 import { Ionicons } from '@expo/vector-icons';
+import MyDrawerLayout from '../navigation/DrawerLayout';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -19,7 +20,7 @@ export {
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
+  initialRouteName: 'index',
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -60,64 +61,7 @@ function RootLayoutNav() {
       </Stack> */}
       {/* <View> */}
 
-      <Drawer
-        screenOptions={{
-          headerShown: true,
-          headerStyle: {
-            backgroundColor: '#1c222b',
-          },
-          headerTintColor: 'white',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-          drawerStyle: {
-            backgroundColor: '#1c222b',
-          },
-          drawerActiveTintColor: 'white',
-          drawerActiveBackgroundColor: '#1c8fff',
-          drawerInactiveBackgroundColor: '#1c222b',
-          drawerLabelStyle: {
-            fontWeight: '900',
-            color: 'white',
-            lineHeight: 20,
-          },
-        }}
-      >
-        {/* make  a card on top of the navbar */}
-
-        <Drawer.Screen
-          name='modal' // This is the name of the page and must match the url from root
-          options={{
-            drawerLabel: 'Today',
-            title: 'Today',
-
-            drawerIcon: ({ color }) => (
-              // <FontAwesome name='calendar' color={'#1c8fff'} size={20} />
-              <Ionicons name='calendar' size={24} color={color} />
-            ),
-          }}
-        />
-        <Drawer.Screen
-          name='(tabs)'
-          options={{
-            drawerLabel: 'Your Statistics',
-            title: 'Your Stats',
-            drawerIcon: ({ color }) => (
-              <FontAwesome name='bar-chart' color={'#1c8fff'} size={20} />
-            ),
-          }}
-        />
-        <Drawer.Screen
-          name='challenges'
-          options={{
-            drawerLabel: 'Challenges',
-            title: 'Challenges',
-            drawerIcon: ({ color }) => (
-              <FontAwesome name='trophy' color={'#1c8fff'} size={20} />
-            ),
-          }}
-        />
-      </Drawer>
+      <MyDrawerLayout />
 
       {/* </View> */}
     </ThemeProvider>
