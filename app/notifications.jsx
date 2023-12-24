@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
 
-const Challenges = () => {
+const Notifications = () => {
   return (
     <View style={styles.container}>
       <Text>Challenges</Text>
@@ -9,7 +9,7 @@ const Challenges = () => {
   );
 };
 
-export default Challenges;
+export default Notifications;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

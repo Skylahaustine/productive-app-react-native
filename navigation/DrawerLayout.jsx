@@ -74,6 +74,48 @@ const MyDrawerLayout = () => {
           ),
         }}
       />
+      <Drawer.Screen
+        name='allHabits'
+        options={{
+          drawerLabel: 'All Habits',
+          title: 'All Habits',
+          drawerIcon: ({ color, focused }) => (
+            <Ionicons
+              name='settings'
+              size={24}
+              color={focused ? '#fff' : '#1c8fff'}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name='notifications'
+        options={{
+          drawerLabel: 'Notifications',
+          title: 'Notifications',
+          drawerIcon: ({ color, focused }) => (
+            <Ionicons
+              name='notifications'
+              size={24}
+              color={focused ? '#fff' : '#1c8fff'}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name='settings'
+        options={{
+          drawerLabel: 'Settings',
+          title: 'Settings',
+          drawerIcon: ({ color, focused }) => (
+            <Ionicons
+              name='settings'
+              size={24}
+              color={focused ? '#fff' : '#1c8fff'}
+            />
+          ),
+        }}
+      />
     </Drawer>
   );
 };
