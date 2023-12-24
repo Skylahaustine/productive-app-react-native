@@ -49,7 +49,7 @@ const CustomDrawer = (props) => {
               <Text
                 style={{
                   color: '#fff',
-                  // fontFamily: 'Roboto-Regular',
+                  fontFamily: 'SpaceMono',
                   fontSize: 20,
                   // fontWeight: '900',
                   //make text large and tall
