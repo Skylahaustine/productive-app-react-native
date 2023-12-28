@@ -7,7 +7,7 @@ import { Text, View } from '../components/Themed';
 export default function ModalScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Modal</Text>
+      <Text style={styles.title}> Uhh ohh,,Nothing for you today</Text>
       <View
         style={styles.separator}
         lightColor='#eee'
